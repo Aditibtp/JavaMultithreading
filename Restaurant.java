@@ -20,10 +20,38 @@ public class Restaurant {
 
         WaitAndNotify wn = new WaitAndNotify();
 
-        try{
+        /*try{
             wn.useWaitAndNotify();
         }catch(InterruptedException e){
             e.printStackTrace();
+        }*/
+
+        SymphonySynchro ss  = new SymphonySynchro();
+        /*try{
+            ss.useSynchro();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }*/
+        FancyLocks fl = new FancyLocks();
+        /*try{
+            fl.useFancyLocks();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }*/
+
+        AvoidDeadLocks ad = new AvoidDeadLocks();
+        /*try{
+           ad.useAvoidDeadLocks();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }*/
+
+        TheSemaphores ts = new TheSemaphores();
+        try{
+            ts.useConnections();
+        }catch (InterruptedException e){
+            e.printStackTrace();
         }
+
     }
 }
